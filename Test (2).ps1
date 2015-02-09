@@ -22,6 +22,7 @@ set-content c:\scripts\test.txt (get-date)
 (Get-Content -path c:\scripts\psoft\servers.txt)|foreach {
 $Servername, $MemMB = $_.Split(",")
 
+#Collect the data
 Add-Content c:\scripts\test.txt -value $Servername
 }
 
